@@ -14,7 +14,7 @@
 
 ## わいわい担当
 
-@nobuhikosawai, @ota42y, @shinofumijp
+@mtsmfm, @nobuhikosawai, @ota42y, @shinofumijp
 
 ## 進行補助・制作
 
