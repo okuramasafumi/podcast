@@ -14,7 +14,7 @@
 
 ## わいわい担当
 
-@qsona, @nobuhikosawai, @ota42y, @shinofumijp
+@nobuhikosawai, @ota42y, @shinofumijp
 
 ## 進行補助・制作
 
