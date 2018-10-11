@@ -41,7 +41,8 @@
     * Railsリポジトリのウォッチの仕方
     * Rubyのtrunkの追い方
     * DBAとしての知識を得るための学習法
-    * Oracle enhanced adapterではJRubyをメンテナンスしているが、何をメンテナンスするか方針の決め方
+    * Oracle enhanced adapterを例にしたFeature Request やバグイシューなどに対するトリアージに対する考え方
+    * Oracle enhanced adapterでのJRubyをメンテナンスしている理由について
     * これからのソフトウェア開発の世界においてRailsがどのような位置付けになっていくかの予想図
 * 休憩
 * 人物・原風景
@@ -57,7 +58,7 @@
     * 良いコミュニティとは何か?（感覚でかまいません）
     * 余暇の過ごし方
 * 休憩
-* RailsConfと日本のRailsフレームワーク/アプリケーション開発者
+* RailsConfとRailsフレームワーク/アプリケーション開発者
     * Railsコミュニティが素晴らしいと思うところ
     * 最初にRailsConfに行こうと思ったきっかけ
     * RailsConfで印象に残った出来事、プレゼン
