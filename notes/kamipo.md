@@ -14,7 +14,7 @@
 
 ## わいわい担当
 
-@koic, @y_yagi, @mtsmfm, @ota42y
+@koic, @y_yagi, @ota42y
 
 ## 進行補助・制作
 
