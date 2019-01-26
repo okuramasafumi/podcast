@@ -69,6 +69,13 @@
         - [「社内ツール作成サークル」活動記録 - Rails Developers Meetup 2018 - Togetter](https://togetter.com/li/1212010)
       - 次回のRails Developers Meetup 2019にも登壇すること
         - まだTBAとのこと
+      - 組織での開発におけるアプリケーションのコードベースの健全化について詳しい
+        - [ふつうのRailsアプリケーション開発](https://www.slideshare.net/takafumionaka/rails-77195340)
+          - Rails wayに乗っることにより開発の速度を上げることについて
+        - [すこやかRails](https://www.slideshare.net/takafumionaka/rails-41084470)
+          - アプリケーションのコードを健全に保つためにどのような取り組みをしたか
+        - [「速」を落とさないコードレビュー](https://www.slideshare.net/takafumionaka/ss-71482322)
+          - いかに開発速度とコードレビューの密度を両立させるかについて
     - unasukeさんから見た、onkさんはどういう存在か
       - 大規模なアクセスのあるWebアプリケーションの設計・開発に明るい
       - OSS化や社内gem化などの推進から感じるtech lead感
@@ -105,17 +112,10 @@
       - Railsを採用するにあたって他に検討したWAFや言語があったのか
       - なぜRailsを採用することにしたのか
 - 去年から、RubyからPerlの世界に鞍替えした
-  - RubyとPerlを比較してどうか
-    - 「オブジェクトではなくてスコープを弄るのがPerl Way」
-      - https://www.slideshare.net/takafumionaka/perlrubyist-96797887
-  - 移行には苦労したのか
-    - 入社前からPerlは触るようにしていたのか
-    - どれくらいの期間で「Perl脳」に切り替わったのか
 
 ### Section 4: オープンソースとの関わり
 
-Perlの話に進む前に、ドリコム時代にOnkCopなどをリリースしていたことに触れて、オープンソースとの関わりを聞く。
-
+- はてなでのやっていきの前に、ドリコム時代の代表作とOSSについての話を伺いたい
 - OnkCopについて
     - OnkCopとは
         - RuboCopのCopを全部確認して、好みを反映させたものをまとめたもの
@@ -124,36 +124,44 @@ Perlの話に進む前に、ドリコム時代にOnkCopなどをリリースし�
         - コメントでなぜこのようなルールにしてあるのかが書かれている
           - https://github.com/onk/onkcop/blob/master/config/rubocop.yml
         - 一時期は新着のCopを全部見てルールを編集していた(ことを公言されてましたよね？)
-        - onkcop採用プロダクト
+        - OnkCop採用プロダクトが結構あることについてどう思っているのか
           - https://rubygems.org/gems/onkcop/reverse_dependencies
-    - Drecom当時のユースケースについて
-        - これをそのままGemfileに書いていたのか？
+    - ドリコム当時のユースケースについて
+        - 誕生の背景
+        - これをそのまま社内アプリのGemfileに書いていたのか？
           - その場合属人化してしまわなかったのか？
     - 現在のメンテナンスについて
         - もう「RuboCopの新規Cop全部見る」はやってない？
           - https://twitter.com/onk/status/1085769792428994560
         - 現職で使用することがあるのかどうか
 - それ以外のドリコム時代に作ったgemについて
+    - [クローズドソースから始めるオープンソース](https://www.slideshare.net/takafumionaka/ss-76268823)
     - メンテナンスする人がいなくなると困ると思うが、引き継いできたのかどうか or 今でもメンテしているのか?
     - どのような基準で社内gemにしていたか、それをpublicにするのはどのような基準からか
       - 単純にビジネスロジックが含まれるか否かで判断していた？
-- Perlでのライブラリ作成や、LintToolについて
+- Perlでのライブラリ作成について
   - 既に公開しているライブラリはあるのか
-  - はてなでLint toolを使用しているのか？
 
 ### Section 5: はてなでの取り組み
 
 インタビュー記事やブログのエントリなどに触れながら、はてなでの取り組みを伺います。
 
-- 前職と現職の違い
+- 言語面での前職と現職の違いについて
+  - RubyとPerlを比較してどうか
+    - 「オブジェクトではなくてスコープを弄るのがPerl Way」
+      - https://www.slideshare.net/takafumionaka/perlrubyist-96797887
+  - 移行には苦労したのか
+    - 入社前からPerlは触るようにしていたのか
+    - どれくらいの期間で「Perl脳」に切り替わったのか
 - 今は具体的には何をやっているのか?
     - 大仲組の話にふれる
       - > Developer Productivity チーム (通称 大仲組)
       - > アプリケーション開発のすこやかさの維持と、生産性の向上
         - 「すこやかさ」とは？
         - 生産性の向上のためにどのようなことを行っているのか
+        - はてなでLint toolを使用しているのか？
     - 横断的に物事を解決する
-      - Drecom時代にも行なわれてましたよね？
+      - ドリコム時代にも行なわれてましたよね？
       - 社内ライブラリの作成など？
 - ご自身の強みと弱みはどこか?
 - Rubyを書く同僚がいるのかどうか?
@@ -168,6 +176,7 @@ Perlの話に進む前に、ドリコム時代にOnkCopなどをリリースし�
 今年は登壇が多いので、どのようにネタを構成していくのか聞く。
 
 - YAPC::Tokyo（1月）
+  - Perl on Rails
 - 銀座 Rails（2月）
 - Rails Developers Meetup 2019（3月）
 - RubyKaigi?
