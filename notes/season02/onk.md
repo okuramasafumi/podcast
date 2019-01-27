@@ -2,7 +2,7 @@
 
 ## 収録日時
 
-未定
+2019-01-28 19:00〜
 
 ## 収録時間
 
@@ -30,7 +30,9 @@
 ### イントロダクション（unasukeさんのモノローグ）
 
 - 収録日
+  - 2019-01-28 19:00
 - 収録場所
+  - 株式会社バンク
 - 協賛案内
     - この番組は、○○さんの協賛により提供しております。
 - コンセプト説明
@@ -39,11 +41,11 @@
     - 登壇やブログで触れることのない話を聴いていく
     - カルパスさん曰く、実質 unasuke.fm ということなのでやっていきます
     - unasukeさんの自己紹介
-        - 年齢（意図: 若い方に自分と同じくらいの世代の方が司会だと分かって欲しい）
-        - エンジニア歴
-        - 所属
-        - 普段やっていること
-        - 最近の関心事
+        - 年齢 1994年生まれの24再
+        - エンジニア歴 学習歴9年、実務4年目
+        - 所属 株式会社バンク エンジニア
+        - 普段やっていること Rails appの運用・開発、インフラまわり
+        - 最近の関心事 mruby, Kubernetes, container
     - この番組のハッシュタグは #unasukefm でお願いします
 - ジングルへのキュー
     - それでは Railsdm Podcast Season 2, Episode 1 はじめていきましょう
@@ -58,12 +60,25 @@
 - ゲスト紹介
     - unasukeさんからonkさんの紹介して下さい
     - 経歴
-      - ドリコムのエンジニア（XX年〜XX年）
+      - ドリコムのエンジニア（2006年〜2018年）
       - 去年の2018年に京都に移住されて、はてなに転職
       - RubyKaigi, Railsdmでも登壇していること
-          - 代表的なセッションを紹介
+        - [API Development in 2017 - RubyKaigi 2017](https://rubykaigi.org/2017/presentations/onk.html)
+        - [RubyKaigi 2017 でどんな発表をしたか - onk.ninja](https://blog.onk.ninja/2017/09/21/my_talk_of_rubykaigi_2017)
+        - [RubyKaigi2017 API開発の歴史と今後 #RubyKaigi2017 - Tech Inside Drecom](https://tech.drecom.co.jp/rubykaigi2017-api%E9%96%8B%E7%99%BA%E3%81%AE%E6%AD%B4%E5%8F%B2%E3%81%A8%E4%BB%8A%E5%BE%8C/)
+        - [「社内ツール作成サークル」活動記録 - Rails Developers Meetup 2018 - Togetter](https://togetter.com/li/1212010)
       - 次回のRails Developers Meetup 2019にも登壇すること
+        - まだTBAとのこと
+      - 組織での開発におけるアプリケーションのコードベースの健全化について詳しい
+        - [ふつうのRailsアプリケーション開発](https://www.slideshare.net/takafumionaka/rails-77195340)
+          - Rails wayに乗っることにより開発の速度を上げることについて
+        - [すこやかRails](https://www.slideshare.net/takafumionaka/rails-41084470)
+          - アプリケーションのコードを健全に保つためにどのような取り組みをしたか
+        - [「速」を落とさないコードレビュー](https://www.slideshare.net/takafumionaka/ss-71482322)
+          - いかに開発速度とコードレビューの密度を両立させるかについて
     - unasukeさんから見た、onkさんはどういう存在か
+      - 大規模なアクセスのあるWebアプリケーションの設計・開発に明るい
+      - OSS化や社内gem化などの推進から感じるtech lead感
     - 改めて、よろしくお願いします
 
 ### Section 2: 京都移住について
@@ -92,28 +107,62 @@
 - ドリコムに入社した経緯と、在職時の役割
     - どういう仕事をしていて、どういう問題を解決していたか
     - うまくできたこと, うまくできなかったこと
+    - Railsを採用した2009年における状況について (2.2~2.3.5 あたり)
+      - https://blog.onk.ninja/2014/12/02/mountable_engine
+      - Railsを採用するにあたって他に検討したWAFや言語があったのか
+      - なぜRailsを採用することにしたのか
 - 去年から、RubyからPerlの世界に鞍替えした
 
 ### Section 4: オープンソースとの関わり
 
-Perlの話に進む前に、ドリコム時代にOnkcopなどをリリースしていたことに触れて、オープンソースとの関わりを聞く。
-
-- onkcopについて
-    - onkcopとは何か・どこが凄いかをunasukeさんが説明
+- はてなでのやっていきの前に、ドリコム時代の代表作とOSSについての話を伺いたい
+- OnkCopについて
+    - OnkCopとは
+        - RuboCopのCopを全部確認して、好みを反映させたものをまとめたもの
+          - https://blog.onk.ninja/2015/10/27/rubocop-getting-started
+          - https://github.com/onk/onkcop
+        - コメントでなぜこのようなルールにしてあるのかが書かれている
+          - https://github.com/onk/onkcop/blob/master/config/rubocop.yml
+        - 一時期は新着のCopを全部見てルールを編集していた(ことを公言されてましたよね？)
+        - OnkCop採用プロダクトが結構あることについてどう思っているのか
+          - https://rubygems.org/gems/onkcop/reverse_dependencies
+    - ドリコム当時のユースケースについて
+        - 誕生の背景
+        - これをそのまま社内アプリのGemfileに書いていたのか？
+          - その場合属人化してしまわなかったのか？
     - 現在のメンテナンスについて
         - もう「RuboCopの新規Cop全部見る」はやってない？
+          - https://twitter.com/onk/status/1085769792428994560
+        - 現職で使用することがあるのかどうか
 - それ以外のドリコム時代に作ったgemについて
+    - [クローズドソースから始めるオープンソース](https://www.slideshare.net/takafumionaka/ss-76268823)
     - メンテナンスする人がいなくなると困ると思うが、引き継いできたのかどうか or 今でもメンテしているのか?
-- Perlでのライブラリ作成や、LintToolについて
+    - どのような基準で社内gemにしていたか、それをpublicにするのはどのような基準からか
+      - 単純にビジネスロジックが含まれるか否かで判断していた？
+- Perlでのライブラリ作成について
+  - 既に公開しているライブラリはあるのか
 
 ### Section 5: はてなでの取り組み
 
 インタビュー記事やブログのエントリなどに触れながら、はてなでの取り組みを伺います。
 
-- 前職と現職の違い
+- 言語面での前職と現職の違いについて
+  - RubyとPerlを比較してどうか
+    - 「オブジェクトではなくてスコープを弄るのがPerl Way」
+      - https://www.slideshare.net/takafumionaka/perlrubyist-96797887
+  - 移行には苦労したのか
+    - 入社前からPerlは触るようにしていたのか
+    - どれくらいの期間で「Perl脳」に切り替わったのか
 - 今は具体的には何をやっているのか?
     - 大仲組の話にふれる
+      - > Developer Productivity チーム (通称 大仲組)
+      - > アプリケーション開発のすこやかさの維持と、生産性の向上
+        - 「すこやかさ」とは？
+        - 生産性の向上のためにどのようなことを行っているのか
+        - はてなでLint toolを使用しているのか？
     - 横断的に物事を解決する
+      - ドリコム時代にも行なわれてましたよね？
+      - 社内ライブラリの作成など？
 - ご自身の強みと弱みはどこか?
 - Rubyを書く同僚がいるのかどうか?
     - Ruby 2.6がリリースされたとき、一緒に盛り上がれる人はいるのか?
@@ -127,6 +176,7 @@ Perlの話に進む前に、ドリコム時代にOnkcopなどをリリースし�
 今年は登壇が多いので、どのようにネタを構成していくのか聞く。
 
 - YAPC::Tokyo（1月）
+  - Perl on Rails
 - 銀座 Rails（2月）
 - Rails Developers Meetup 2019（3月）
 - RubyKaigi?
@@ -142,6 +192,7 @@ Perlの話に進む前に、ドリコム時代にOnkcopなどをリリースし�
 最後に今後の展望を尋ねる
 
 - 今後の軸足は、Perl companyにRubyを導入していく、いわゆるRubyist?
+- Ruby界隈との関わりは今後も継続していくのか？
 - Rubyもできる Perl monger?
 
 締めの言葉: 「本日のゲストはonkさんでした。ありがとうございました」
